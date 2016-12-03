@@ -35,8 +35,14 @@ public class menu extends javax.swing.JFrame {
         btnLog = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(500, 250));
 
         force.setText("Force Equations");
+        force.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                forceActionPerformed(evt);
+            }
+        });
 
         pjMo1.setText("Projectile Motion");
         pjMo1.addActionListener(new java.awt.event.ActionListener() {
@@ -123,6 +129,12 @@ public class menu extends javax.swing.JFrame {
         this.setVisible(false);
         obj.setVisible(true);
     }//GEN-LAST:event_btnLogActionPerformed
+
+    private void forceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_forceActionPerformed
+        forcesEQ obj = new forcesEQ();
+        this.setVisible(false);
+        obj.setVisible(true);
+    }//GEN-LAST:event_forceActionPerformed
 
     /**
      * @param args the command line arguments

@@ -60,6 +60,7 @@ public class vec extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Vector Calculator");
+        setLocation(new java.awt.Point(500, 250));
 
         btnExit.setText("Return");
         btnExit.addActionListener(new java.awt.event.ActionListener() {
