@@ -29,13 +29,14 @@ public class menu extends javax.swing.JFrame {
     private void initComponents() {
 
         force = new javax.swing.JButton();
-        pjMo1 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         vector = new javax.swing.JButton();
         btnLog = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(500, 250));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         force.setText("Force Equations");
         force.addActionListener(new java.awt.event.ActionListener() {
@@ -43,13 +44,7 @@ public class menu extends javax.swing.JFrame {
                 forceActionPerformed(evt);
             }
         });
-
-        pjMo1.setText("Projectile Motion");
-        pjMo1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pjMo1ActionPerformed(evt);
-            }
-        });
+        getContentPane().add(force, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 382, 57));
 
         jButton1.setText("Exit");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -57,6 +52,7 @@ public class menu extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 340, -1, -1));
 
         vector.setText("Vectors");
         vector.addActionListener(new java.awt.event.ActionListener() {
@@ -64,6 +60,7 @@ public class menu extends javax.swing.JFrame {
                 vectorActionPerformed(evt);
             }
         });
+        getContentPane().add(vector, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 382, 60));
 
         btnLog.setText("Logarithms");
         btnLog.addActionListener(new java.awt.event.ActionListener() {
@@ -71,47 +68,13 @@ public class menu extends javax.swing.JFrame {
                 btnLogActionPerformed(evt);
             }
         });
+        getContentPane().add(btnLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 382, 53));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(vector, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pjMo1, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
-                    .addComponent(force, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1))
-                    .addComponent(btnLog, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pjMo1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(force, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(vector, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnLog, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hackathon/kms/bRXeBc.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void pjMo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pjMo1ActionPerformed
-        pjMo obj = new pjMo();
-        this.setVisible(false);
-        obj.setVisible(true);
-    }//GEN-LAST:event_pjMo1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         System.exit(0);
@@ -175,7 +138,7 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JButton btnLog;
     private javax.swing.JButton force;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton pjMo1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton vector;
     // End of variables declaration//GEN-END:variables
 }

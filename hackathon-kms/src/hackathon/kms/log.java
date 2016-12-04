@@ -36,9 +36,11 @@ public class log extends javax.swing.JFrame {
         btnLog10 = new javax.swing.JButton();
         btnLogE = new javax.swing.JButton();
         btnLogB = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Logarithm calculator");
+        setLocation(new java.awt.Point(500, 250));
 
         lblPrimary.setText("Enter the logarithm to be calculated below:");
 
@@ -67,6 +69,13 @@ public class log extends javax.swing.JFrame {
             }
         });
 
+        btnBack.setText("Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -87,7 +96,10 @@ public class log extends javax.swing.JFrame {
                         .addComponent(btnLog10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnLogE))
-                    .addComponent(btnLogB))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnLogB)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnBack)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -108,7 +120,9 @@ public class log extends javax.swing.JFrame {
                     .addComponent(btnLog10)
                     .addComponent(btnLogE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnLogB)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnLogB)
+                    .addComponent(btnBack))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -140,6 +154,12 @@ public class log extends javax.swing.JFrame {
         double answer = Math.log(argument) / Math.log(base);
         JOptionPane.showMessageDialog(null, "The log of " + argument + " base " + base + " is " + answer + ".");
     }//GEN-LAST:event_btnLogBActionPerformed
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        menu obj = new menu();
+        this.setVisible(false);
+        obj.setVisible(true);
+    }//GEN-LAST:event_btnBackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,6 +197,7 @@ public class log extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnLog10;
     private javax.swing.JButton btnLogB;
     private javax.swing.JButton btnLogE;
